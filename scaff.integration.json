@@ -1,0 +1,17 @@
+{
+  "kode": "cloudinary",
+  "version": "1.0.0",
+  "frameworks": ["nextjs"],
+  "files": [
+    { "src": "lib/media/cloudinary.ts", "dest": "lib/media/cloudinary.ts" },
+    { "src": "app/api/media/upload/route.ts", "dest": "app/api/media/upload/route.ts" }
+  ],
+  "env": ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"],
+  "setup": "SETUP-FRAGMENT.md",
+  "removal": {
+    "files": ["lib/media/cloudinary.ts", "app/api/media/upload/route.ts"],
+    "env": ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"],
+    "stepsFile": "REMOVE.md"
+  },
+  "conflicts": []
+}
