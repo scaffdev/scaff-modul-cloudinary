@@ -7,7 +7,7 @@ Disuntik via `scaff ... --with=cloudinary` (CLI 0.2.0+).
 | Framework | Status | Isi |
 |---|---|---|
 | Next.js | ✅ v1.0.0 | Client upload (Basic Auth server-side) + route multipart |
-| Laravel | 🟡 STAGED (v1.1.0) | Service + Controller sudah ditulis, belum disuntik CLI |
+| Laravel | ✅ v1.0.0 | Service + Controller (HTTP client) |
 
 ## Struktur
 
@@ -19,7 +19,7 @@ scaff-modul-cloudinary/
 ├── nextjs/
 │   ├── lib/media/cloudinary.ts
 │   └── app/api/media/upload/route.ts
-└── laravel/                 ← STAGED untuk v1.1.0
+└── laravel/                 ← sumber untuk base Laravel
     ├── app/Services/CloudinaryService.php
     └── app/Http/Controllers/CloudinaryController.php
 ```

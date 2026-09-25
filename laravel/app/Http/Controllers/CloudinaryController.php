@@ -7,9 +7,9 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 /**
- * Controller upload — STAGED untuk dukungan Laravel (aktif di v1.1.0).
+ * Controller upload — disuntik Scaffdev Builder ke template Laravel.
  *
- * NOTED — daftarkan route manual saat v1.1.0 rilis:
+ * NOTED — daftarkan route manual (mis. di routes/api.php):
  *   Route::post('/api/media/upload', [CloudinaryController::class, 'upload']);
  * TODO pemilik project: batasi hanya user terautentikasi (mis. middleware auth)
  * + rate-limit agar kuota tidak dihabiskan publik.

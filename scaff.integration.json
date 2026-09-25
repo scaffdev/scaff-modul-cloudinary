@@ -1,15 +1,17 @@
 {
   "kode": "cloudinary",
   "version": "1.0.0",
-  "frameworks": ["nextjs"],
+  "frameworks": ["nextjs", "laravel"],
   "files": [
-    { "src": "lib/media/cloudinary.ts", "dest": "lib/media/cloudinary.ts" },
-    { "src": "app/api/media/upload/route.ts", "dest": "app/api/media/upload/route.ts" }
+    { "src": "lib/media/cloudinary.ts", "dest": "lib/media/cloudinary.ts", "frameworks": ["nextjs"] },
+    { "src": "app/api/media/upload/route.ts", "dest": "app/api/media/upload/route.ts", "frameworks": ["nextjs"] },
+    { "src": "app/Services/CloudinaryService.php", "dest": "app/Services/CloudinaryService.php", "frameworks": ["laravel"] },
+    { "src": "app/Http/Controllers/CloudinaryController.php", "dest": "app/Http/Controllers/CloudinaryController.php", "frameworks": ["laravel"] }
   ],
   "env": ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"],
   "setup": "SETUP-FRAGMENT.md",
   "removal": {
-    "files": ["lib/media/cloudinary.ts", "app/api/media/upload/route.ts"],
+    "files": ["lib/media/cloudinary.ts", "app/api/media/upload/route.ts", "app/Services/CloudinaryService.php", "app/Http/Controllers/CloudinaryController.php"],
     "env": ["CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET"],
     "stepsFile": "REMOVE.md"
   },

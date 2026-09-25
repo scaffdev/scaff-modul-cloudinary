@@ -6,10 +6,10 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
 
 /**
- * Service upload Cloudinary — STAGED untuk dukungan Laravel (aktif di v1.1.0).
+ * Service upload Cloudinary — disuntik Scaffdev Builder ke template Laravel.
  *
  * NOTED:
- * - File ini BELUM disuntik CLI (manifest v1.0.0 frameworks: ["nextjs"]).
+ * - File ini 100% milik modul "cloudinary" (lihat scaff.integration.json).
  * - Auth Basic (api_key:api_secret) sesuai anjuran docs untuk server-side.
  *   Ref: https://cloudinary.com/documentation/image_upload_api_reference
  */

@@ -29,3 +29,39 @@ Simpan `secureUrl` ke database sebagai URL gambar produk.
 
 NOTED: batasi route ini hanya untuk penjual/admin (auth + rate-limit) —
 TODO sudah ditandai di kode route. Jangan biarkan publik upload bebas.
+
+---
+
+## Setup Laravel (base Laravel)
+
+> CLI menyuntik Service + Controller; 3 langkah manual di bawah wajib
+> karena tidak bisa di-generate otomatis. Tanpa SDK tambahan.
+
+### L1. Isi `.env`
+
+```bash
+CLOUDINARY_CLOUD_NAME=xxxx
+CLOUDINARY_API_KEY=xxxx
+CLOUDINARY_API_SECRET=xxxx   # rahasia! server saja
+```
+
+### L2. Tambah ke `config/services.php`
+
+```php
+'cloudinary' => [
+    'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+    'api_key' => env('CLOUDINARY_API_KEY'),
+    'api_secret' => env('CLOUDINARY_API_SECRET'),
+],
+```
+
+### L3. Daftarkan route (mis. di `routes/api.php`)
+
+```php
+use App\Http\Controllers\CloudinaryController;
+
+Route::post('/api/media/upload', [CloudinaryController::class, 'upload']);
+```
+
+Lalu `php artisan config:clear`. Batasi hanya user terautentikasi
+(middleware auth + rate-limit, TODO di controller).
