@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { uploadImage } from "../../../../../lib/media/cloudinary";
+import { uploadImage } from "../../../../lib/media/cloudinary";
 
 /**
  * POST /api/media/upload — terima 1 file gambar (multipart), upload ke Cloudinary.

@@ -1,6 +1,7 @@
 {
   "kode": "cloudinary",
   "version": "1.0.0",
+  "docsUrl": "https://cloudinary.com/documentation/image_upload_api_reference",
   "frameworks": ["nextjs", "laravel"],
   "files": [
     { "src": "lib/media/cloudinary.ts", "dest": "lib/media/cloudinary.ts", "frameworks": ["nextjs"] },
