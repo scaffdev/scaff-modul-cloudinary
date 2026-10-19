@@ -60,7 +60,8 @@ CLOUDINARY_API_SECRET=xxxx   # rahasia! server saja
 ```php
 use App\Http\Controllers\CloudinaryController;
 
-Route::post('/api/media/upload', [CloudinaryController::class, 'upload']);
+// routes/api.php otomatis berprefix /api — jangan tulis /api lagi di sini.
+Route::post('/media/upload', [CloudinaryController::class, 'upload']);
 ```
 
 Lalu `php artisan config:clear`. Batasi hanya user terautentikasi

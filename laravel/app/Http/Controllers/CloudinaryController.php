@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 /**
  * Controller upload — disuntik Scaffdev Builder ke template Laravel.
  *
- * NOTED — daftarkan route manual (mis. di routes/api.php):
- *   Route::post('/api/media/upload', [CloudinaryController::class, 'upload']);
+ * NOTED — daftarkan route manual (mis. di routes/api.php; prefix /api otomatis):
+ *   Route::post('/media/upload', [CloudinaryController::class, 'upload']);
  * TODO pemilik project: batasi hanya user terautentikasi (mis. middleware auth)
  * + rate-limit agar kuota tidak dihabiskan publik.
  */
